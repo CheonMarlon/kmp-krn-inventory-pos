@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'MoneyGame';
+  src: url('/fonts/MoneyGame.ttf') format('truetype');
+}
+
+/* Background like screenshot */
+.selection-bg2 {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #c00000 0%, #8a0000 60%, #620c0c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  color: white;
+}
+
+/* Top Title */
+.selection-title {
+  font-family: 'MoneyGame', sans-serif;
+  font-size: 60px;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+
+/* Grid Layout */
+.selection-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card style like screenshot */
+.selection-card {
+  width: 260px;
+  height: 330px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: 0.3s ease-in-out;
+}
+
+.selection-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Grey placeholder image */
+.thumbnail {
+  width: 100%;
+  height: 60%;
+  background: #d9d9d9;
+  border-radius: 12px;
+}
+
+/* Label under card */
+.selection-label {
+  color: #000;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 18px;
+  display: inline-block;
+}

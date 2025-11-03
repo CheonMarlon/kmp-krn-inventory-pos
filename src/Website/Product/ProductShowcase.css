@@ -1,0 +1,160 @@
+/* ==== BASE ==== */
+.product-showcase {
+  background: #ffffff;
+  color: #111;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: "MoneyGame", "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+/* ==== HEADER ==== */
+.header {
+  text-align: center;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #e53935;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+
+  background: linear-gradient(to top, #ffffff, #b71c1c); /* dark red to light red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; 
+}
+
+
+
+.header p {
+  font-family: 'Courier New', Courier, monospace;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* ==== TABS ==== */
+.category-tabs button {
+  font-weight: 600;
+  color: #000;
+}
+
+.category-tabs .Mui-selected {
+  color: #e53935 !important;
+}
+
+.MuiTabs-indicator {
+  background-color: #e53935 !important;
+  height: 3px;
+}
+
+/* ==== DIVIDER ==== */
+.divider {
+  margin-bottom: 2rem !important;
+}
+
+/* ==== GRID ==== */
+.MuiGrid-container {
+  align-items: stretch !important;
+}
+
+.MuiGrid-item {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card {
+  border-radius: 1.25rem !important;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  /* FIXED SIZE */
+  width: 220px;
+  height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* Thin subtle border */
+  border: 0.5px solid ;
+  box-shadow: none;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ==== IMAGE BOX ==== */
+.image-box {
+  background: #fafafa;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-bottom: #000 0.5px solid;
+}
+
+/* ==== CARD CONTENT ==== */
+.product-card .MuiCardContent-root {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ==== TEXT ==== */
+.product-name {
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.product-note {
+  font-size: 0.8rem !important;
+  color: #e53935;
+  margin-top: 0.25rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* ==== DIALOG ==== */
+.dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  background-color: #111;
+  color: #fff;
+}
+
+.dialog-image {
+  margin-top: 2rem;
+  height: 180px;
+  background: #f5f5f5;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}

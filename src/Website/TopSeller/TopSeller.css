@@ -1,0 +1,288 @@
+/* ==== TOP SELLER SECTION ==== */
+.top-seller-section {
+  position: relative;
+  background: radial-gradient(circle at 30% 50%, #cc2929 0%, #a01f1f 40%, #7c0303 100%);  padding: 8rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+/* top shadow gradient overlay */
+.top-seller-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* adjust height for shadow intensity */
+  background: linear-gradient(to bottom, rgba(77, 0, 0, 0.664), transparent);
+  pointer-events: none; /* ensures the shadow doesn't block clicks */
+  z-index: 1; /* sit above background but below content */
+}
+/*
+ 
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  background-blend-mode: overlay;
+*/
+
+/*
+
+  .top-seller-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+    opacity: 0.3;
+    animation: subtleMove 14s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+*/
+
+
+@keyframes subtleMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+/* title styling with symmetry */
+.top-seller-title {
+  font-family: 'MoneyGame', sans-serif;
+  text-transform: uppercase;
+  font-size: 5.5rem;
+  top: -1rem;
+  color: #ffffff;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.top-seller-title::before,
+.top-seller-title::after {
+  content: '❖';
+  position: relative;
+  top: -0.2rem;
+  margin: 0 1rem;
+  font-size: 5rem;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* ==== CURVED BOTTOM ==== */
+.top-seller-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* adjust height for curve */
+  background: #fff; /* the color of the curve */
+  border-top-left-radius: 50% 200px;
+  border-top-right-radius: 50% 200px;
+  z-index: 2;
+}
+
+.top-seller-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120%;
+  height: 180px; /* adjust to match the curve height */
+  background: #fff;
+  clip-path: path('M0,170.44 C554.5,10.56 874.5,10.06 1415,200.44 L1415,180 L0,180 Z');
+  z-index: 2;
+}
+
+
+
+
+
+.lantern1{
+  position: absolute;
+  width: 25rem;
+  top: 0px;
+  left: 20px;
+  z-index: 2;
+}
+
+.lantern2{
+  position: absolute;
+  width: 25rem;
+  top: 0px;
+  right: 20px;
+  z-index: 2;
+}
+
+.lantern3{
+  position: absolute;
+  width: 15rem;
+  top: 0px;
+  right: -40px;
+  z-index: 1;
+}
+
+.lantern4{
+  position: absolute;
+  width: 15rem;
+  top: 0px;
+  left: -40px;
+  z-index: 1;
+}
+
+/* ==== CARD CONTAINER ==== */
+.top-seller-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 400px;
+  perspective: 1000px;
+  z-index: 2;
+}
+
+/* ==== BASE CARD STYLING ==== */
+.seller-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.seller-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.seller-card p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+
+
+/* ==== CENTER CARD ==== */
+.center-card {
+  position: relative;
+  width: 260px;
+  height: 350px;
+  z-index: 5;
+  border-width: 4px;
+  border-radius: 20px;
+  box-shadow: #000 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6rem);
+  pointer-events: auto;
+  background: #fff;
+  transition: all 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+              0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== SIDE CARDS ==== */
+.side-card {
+  position: absolute;
+  top: 50%;
+  width: 260px;
+  height: 300px;
+  border-radius: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0; 
+  pointer-events: none;
+}
+
+/* Left side card (first .side-card) */
+.side-card:nth-child(1) {
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); /* shadow to left */
+}
+
+/* Right side card (second .side-card) */
+.side-card:nth-child(3) {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);  /* shadow to right */
+}
+
+
+/* ==== UNDERLINE ==== */
+.seller-underline {
+  margin: 3rem auto 0;
+  width: 70%;
+  height: 4px;
+  background: #000;
+  border-radius: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+/* animated grayscale glow behind underline */
+.seller-underline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2), transparent 70%);
+  filter: blur(10px);
+  animation: pulseGlow 3s infinite ease-in-out;
+  z-index: -1;
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.05); }
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+  .top-seller-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .center-card {
+    transform: none;
+    width: 80%;
+    height: auto;
+  }
+
+  .side-card {
+    position: static;
+    opacity: 1 !important;
+    transform: none !important;
+    width: 80%;
+    height: auto;
+    pointer-events: auto;
+  }
+
+  .seller-card img {
+    height: 200px;
+  }
+
+  .top-seller-title {
+    font-size: 2rem;
+  }
+}

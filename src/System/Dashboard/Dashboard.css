@@ -1,0 +1,224 @@
+/* === GLOBAL LAYOUT === */
+.dashboard-container {
+  padding: 2rem;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === DASHBOARD HEADER === */
+.dashboard-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+/* Title */
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  flex: 1 1 300px;
+  margin: 0;
+}
+
+/* Header buttons container */
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* === FILTER === */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+}
+
+.filter label {
+  font-weight: 600;
+}
+
+.filter select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.filter select:hover {
+  border-color: #555;
+}
+
+/* === HEADER BUTTONS === */
+.print-btn,
+.back-btn,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease, transform 0.2s ease;
+}
+
+.print-btn:hover {
+  background-color: #fffae6;
+  transform: translateY(-2px);
+}
+
+.back-btn:hover {
+  background-color: #e6f0ff;
+  transform: translateY(-2px);
+}
+
+.logout-btn:hover {
+  background-color: #ffe6e6;
+  transform: translateY(-2px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .filter,
+  .print-btn,
+  .back-btn,
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter select,
+  .print-btn,
+  .back-btn,
+  .logout-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+
+/* === SUMMARY CARDS === */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* === CHART SECTIONS === */
+.chart-section {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.chart-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.chart-section p {
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .print-btn,
+  .back-btn,
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "SAMGYUPSAL (MEATS)": [
+    {
+      "id": "meat-1",
+      "name": "500g Beef Woosamgyup (Lean)",
+      "note": "",
+      "image": "/assets/products/beef-woosamgyup-lean.jpg"
+    },
+    {
+      "id": "meat-2",
+      "name": "500g Beef Premium Woosamgyup",
+      "note": "",
+      "image": "/assets/products/beef-premium-woosamgyup.jpg"
+    },
+    {
+      "id": "meat-3",
+      "name": "500g Pork Samgyupsal (Lean)",
+      "note": "",
+      "image": "/assets/products/pork-samgyupsal-lean.jpg"
+    },
+    {
+      "id": "meat-4",
+      "name": "500g Pork Premium Samgyupsal",
+      "note": "",
+      "image": "/assets/products/pork-premium-samgyupsal.jpg"
+    },
+    {
+      "id": "meat-5",
+      "name": "250g Beef Bulgogi",
+      "note": "",
+      "image": "/assets/products/beef-bulgogi.jpg"
+    },
+    {
+      "id": "meat-6",
+      "name": "200g Beef Enoki",
+      "note": "",
+      "image": "/assets/products/beef-enoki.jpg"
+    },
+    {
+      "id": "meat-7",
+      "name": "250g Pork Bulgogi",
+      "note": "",
+      "image": "/assets/products/pork-bulgogi.jpg"
+    },
+    {
+      "id": "meat-8",
+      "name": "200g Pork Enoki",
+      "note": "",
+      "image": "/assets/products/pork-enoki.jpg"
+    }
+  ],
+  "STEAK": [
+    {
+      "id": "steak-1",
+      "name": "Brazilian Beef Ribeye Steak",
+      "note": "~6 pcs per kg",
+      "image": "/assets/products/brazilian-ribeye.jpg"
+    },
+    {
+      "id": "steak-2",
+      "name": "USDA Premium Beef Ribeye Steak",
+      "note": "packed per pc",
+      "image": "/assets/products/usda-ribeye.jpg"
+    },
+    {
+      "id": "steak-3",
+      "name": "USDA Premium Beef Flat Iron Steak",
+      "note": "~8–10 pcs/kg",
+      "image": "/assets/products/flat-iron-steak.jpg"
+    }
+  ],
+  "CHILLED SAUCE AND SIDEDISH": [
+    {
+      "id": "sauce-1",
+      "name": "1kg Kimchi Jar",
+      "note": "",
+      "image": "/assets/products/kimchi-jar.jpg"
+    },
+    {
+      "id": "sauce-2",
+      "name": "500g Kimchi Tub",
+      "note": "",
+      "image": "/assets/products/kimchi-tub.jpg"
+    },
+    {
+      "id": "sauce-3",
+      "name": "250g Kimchi Tub",
+      "note": "",
+      "image": "/assets/products/kimchi-small-tub.jpg"
+    },
+    {
+      "id": "sauce-4",
+      "name": "90g Cooked Samjang",
+      "note": "",
+      "image": "/assets/products/samjang-small.jpg"
+    },
+    {
+      "id": "sauce-5",
+      "name": "250g Samjang",
+      "note": "",
+      "image": "/assets/products/samjang.jpg"
+    },
+    {
+      "id": "sauce-6",
+      "name": "90g Cooked Gochujang",
+      "note": "",
+      "image": "/assets/products/gochujang-small.jpg"
+    },
+    {
+      "id": "sauce-7",
+      "name": "250g Gochujang",
+      "note": "",
+      "image": "/assets/products/gochujang.jpg"
+    },
+    {
+      "id": "sauce-8",
+      "name": "Pickled Radish",
+      "note": "",
+      "image": "/assets/products/pickled-radish.jpg"
+    },
+    {
+      "id": "sauce-9",
+      "name": "Cheese Sauce Small",
+      "note": "",
+      "image": "/assets/products/cheese-sauce-small.jpg"
+    },
+    {
+      "id": "sauce-10",
+      "name": "Cheese Sauce Big",
+      "note": "",
+      "image": "/assets/products/cheese-sauce-big.jpg"
+    },
+    {
+      "id": "sauce-11",
+      "name": "Cooked Potato Marble Tub",
+      "note": "",
+      "image": "/assets/products/potato-marble.jpg"
+    },
+    {
+      "id": "sauce-12",
+      "name": "Cooked Fishcake Tub",
+      "note": "",
+      "image": "/assets/products/fishcake-tub.jpg"
+    },
+    {
+      "id": "sauce-13",
+      "name": "Enoki",
+      "note": "",
+      "image": "/assets/products/enoki.jpg"
+    }
+  ],
+  "DRINKS": [
+    {
+      "id": "drink-1",
+      "name": "Ice Talk",
+      "note": "",
+      "image": "/assets/products/icetalk.jpg"
+    },
+    {
+      "id": "drink-2",
+      "name": "Welch's",
+      "note": "",
+      "image": "/assets/products/welchs.jpg"
+    }
+  ],
+  "GROCERIES": [
+    {
+      "id": "grocery-1",
+      "name": "Samyang Buldak (Cheese / Original / 2x)",
+      "note": "",
+      "image": "/assets/products/samyang-buldak.jpg"
+    },
+    {
+      "id": "grocery-2",
+      "name": "Samyang Buldak Carbonara / Quattro Cheese",
+      "note": "",
+      "image": "/assets/products/samyang-carbonara.jpg"
+    },
+    {
+      "id": "grocery-3",
+      "name": "170g Gochujang",
+      "note": "",
+      "image": "/assets/products/gochujang-170.jpg"
+    },
+    {
+      "id": "grocery-4",
+      "name": "200g Samjang",
+      "note": "",
+      "image": "/assets/products/samjang-200.jpg"
+    }
+  ],
+  "SHABU SHABU HOT POT": [
+    {
+      "id": "shabu-1",
+      "name": "Regular Mixed Balls",
+      "note": "",
+      "image": "/assets/products/regular-mixed-balls.jpg"
+    },
+    {
+      "id": "shabu-2",
+      "name": "Premium Mixed Balls",
+      "note": "",
+      "image": "/assets/products/premium-mixed-balls.jpg"
+    },
+    {
+      "id": "shabu-3",
+      "name": "Crabstick",
+      "note": "",
+      "image": "/assets/products/crabstick.jpg"
+    }
+  ]
+}
