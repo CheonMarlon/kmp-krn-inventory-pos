@@ -346,34 +346,76 @@
   }
 }
 
-/* === MOBILE RESPONSIVE (≤500px) === */
-@media (max-width: 500px) {
+/* === FULL MOBILE STACK FIX (≤430px) === */
+@media (max-width: 430px) {
+  /* Stack everything vertically */
+  .pos-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Make header fixed so nav/logout stay visible */
+  .pos-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 1000;
+    padding: 0.75rem 1rem !important;
+    box-shadow: 0 3px 0 #000;
+  }
+
+  .category-bar {
+    margin-top: 3.5rem !important; /* space for fixed header */
+  }
+
+  /* Add padding so content isn’t hidden behind header */
+  .pos-left {
+    margin-top: 4rem !important; /* adjust if header is taller */
+    border-right: none !important;
+  }
+
+  /* Product grid adjustments */
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* even smaller cards */
-    gap: 6px;
-    padding: 0.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)) !important;
+    gap: 6px !important;
+    padding: 0.5rem !important;
+    width: 100% !important;
   }
 
   .product-card {
-    width: 90px;
-    min-height: 70px;
-    padding: 0.2rem;
-    border-radius: 10px;
-    font-size: 0.65rem;
-  }
-
-  .product-card h3 {
-    font-size: 0.65rem;
-  }
-
-  .product-card p {
+    width: 100% !important;
+    max-width: 90px;
     font-size: 0.6rem;
   }
 
-  .sold-out-badge {
-    font-size: 0.55rem;
-    padding: 1px 2px;
+  /* Stack and resize receipt */
+  .pos-right {
+    border-left: none !important;
+    border-top: 4px solid #000 !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  .receipt {
+    width: 100% !important;
+    margin-top: 1rem !important;
+    position: relative !important;
+    display: block !important;
+  }
+
+  /* Ensure nav + logout visible and aligned */
+  .pos-nav,
+  .logout-btn {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.75rem !important;
+    gap: 0.3rem !important;
+  }
+
+  /* Prevent overflow clipping */
+  body, html {
+    overflow-x: hidden !important;
   }
 }
-
-

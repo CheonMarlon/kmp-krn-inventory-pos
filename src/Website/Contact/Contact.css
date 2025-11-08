@@ -377,3 +377,111 @@
 
 
 }
+
+/* ==== CONTACT LAYOUT MOBILE (below 430px) ==== */
+@media (max-width: 430px) {
+
+  /* === General Layout === */
+  .upper-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+
+  .left-info,
+  .right-info {
+    width: 100%;
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .upper-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .right-info li {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+    .right-info a {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .right-info svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    display: none;
+  }
+
+  /* === Logo and Background === */
+  .center-logo {
+    display: flex;
+    position: absolute;
+    width: 130%;
+    transform: translate(-50%, -47.5%);
+  }
+
+  .center-back {
+    width: 80%;
+    transform: translate(-50%, -30%);
+    opacity: 0.3;
+  }
+
+  /* === Map Section === */
+  .map-container iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  /* === Bottom Section === */
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .lower-left {
+    width: 100%;
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+
+  /* === Hide Decorative Elements === */
+  .cow {
+    display: none;
+  }
+
+  /* === Optional: Font & Spacing Adjustments === */
+  p, li, a {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  h3, h4 {
+    font-size: 1.2rem;
+  }
+
+  /* === Optional: smooth responsive feel === */
+  .upper-section,
+  .bottom-section {
+    transition: all 0.3s ease;
+  }
+}

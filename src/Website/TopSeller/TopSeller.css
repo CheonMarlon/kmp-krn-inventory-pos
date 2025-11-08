@@ -313,3 +313,71 @@
     font-size: 5rem;
   }
 }
+
+/* ==== MOBILE RESPONSIVE (below 430px) ==== */
+@media (max-width: 430px) {
+  .top-seller-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .center-card {
+    width: 90%;
+    height: auto;
+    transform: none;
+  }
+
+  .side-card {
+    width: 95%;
+    height: auto;
+    position: static;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
+
+  .seller-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .top-seller-title {
+    font-size: 3rem;          /* balanced size for small screens */
+    text-align: center;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;   /* stack TOP and SELLER vertically */
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+  }
+
+  .top-seller-section::before {
+    height: 80px;
+    width: 180%;
+    clip-path: path('M0,110 C200,-15 400,-15 600,80 L600,80 L0,80 Z');
+    left: -25%;
+    bottom: -1%;
+  }
+
+  /* Lantern adjustments */
+  .lantern1, .lantern2, .lantern3, .lantern4 {
+    display: none;
+  }
+
+  /* Optional: spacing inside cards */
+  .seller-card {
+    padding: 1rem;
+  }
+
+  /* Optional: shrink text inside cards */
+  .seller-card h3,
+  .seller-card p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
