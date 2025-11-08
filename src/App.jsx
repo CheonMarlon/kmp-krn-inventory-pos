@@ -16,8 +16,8 @@ const App = () => {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // // --- Disable DevTools globally ---
-  // useDisableDevTools();
+  // --- Disable DevTools globally ---
+  useDisableDevTools();
 
   useEffect(() => {
     const getSession = async () => {
