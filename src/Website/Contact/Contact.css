@@ -587,3 +587,103 @@
   }
 }
 
+/* ==== CONTACT LAYOUT MOBILE (≤400px) ==== */
+@media (max-width: 400px) {
+
+  /* === General Layout === */
+  .upper-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.7rem;       /* slightly bigger gap */
+    margin-top: 6.5rem;  /* slightly more top margin */
+    padding: 0.9rem;
+  }
+
+  .left-info,
+  .right-info {
+    width: 100%;
+    max-width: 95%;
+    padding: 0.85rem;
+  }
+
+  .upper-section h2 {
+    font-size: 1.7rem;   /* slightly bigger header */
+    text-align: center;
+    margin-bottom: 0.85rem;
+  }
+
+  .right-info li,
+  .right-info a {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.88rem;  /* slightly bigger text */
+    gap: 0.45rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .right-info svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    display: none; /* decorative icons still hidden */
+  }
+
+  /* === Logo and Background === */
+  .center-logo {
+    display: flex;
+    position: absolute;
+    width: 135%;                  /* slightly bigger logo */
+    transform: translate(-50%, -48%);
+  }
+
+  .center-back {
+    width: 78%;                   /* slightly bigger background */
+    transform: translate(-50.5%, -34%);
+    opacity: 0.55;
+  }
+
+  /* === Map Section === */
+  .map-container iframe {
+    width: 100%;
+    height: 170px;                /* slightly taller map */
+    border-radius: 10px;
+  }
+
+  /* === Bottom Section === */
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.6rem 0.9rem;
+    gap: 1.1rem;
+  }
+
+  .lower-left {
+    width: 100%;
+    max-width: 95%;
+    padding: 1.05rem;
+  }
+
+  /* === Hide Decorative Elements === */
+  .cow {
+    display: none;
+  }
+
+  /* === Font & Spacing Adjustments === */
+  p, li, a {
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  h3, h4 {
+    font-size: 1.15rem;
+  }
+
+  /* === Smooth transitions === */
+  .upper-section,
+  .bottom-section {
+    transition: all 0.3s ease;
+  }
+}

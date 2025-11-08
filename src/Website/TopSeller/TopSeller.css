@@ -448,3 +448,70 @@
     text-align: center;
   }
 }
+
+/* ==== MOBILE RESPONSIVE (≤400px) ==== */
+@media (max-width: 400px) {
+  .top-seller-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;       /* slightly more spacing than 375px */
+    padding: 0.6rem;
+  }
+
+  .center-card {
+    width: 96%;          /* slightly wider than 375px */
+    height: auto;
+    transform: none;
+  }
+
+  .side-card {
+    width: 100%;
+    height: auto;
+    position: static;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
+
+  .seller-card img {
+    width: 100%;
+    height: 140px;       /* a bit taller than 375px */
+    object-fit: cover;
+  }
+
+  .top-seller-title {
+    font-size: 4rem;          /* slightly bigger than 375px */
+    text-align: center;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.5px;
+  }
+
+  .top-seller-section::before {
+    height: 75px;               /* slightly taller curve */
+    width: 200%;
+    clip-path: path('M0,95 C160,-10 320,-10 480,75 L480,75 L0,75 Z');
+    left: -14%;
+    bottom: -1%;
+  }
+
+  /* Hide all lanterns */
+  .lantern1, .lantern2, .lantern3, .lantern4 {
+    display: none;
+  }
+
+  /* Card padding and text size */
+  .seller-card {
+    padding: 0.85rem;
+  }
+
+  .seller-card h3,
+  .seller-card p {
+    font-size: 0.9rem;          /* slightly larger text */
+    text-align: center;
+  }
+}

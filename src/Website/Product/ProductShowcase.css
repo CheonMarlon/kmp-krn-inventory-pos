@@ -259,49 +259,49 @@
   }
 }
 
-/* ==== SMALL PHONE LAYOUT (≤375px) ==== */
-@media (max-width: 375px) {
-  /* Product Grid: 3 cards per row with wider cards */
+/* ==== SMALL PHONE LAYOUT (≤400px) ==== */
+@media (max-width: 400px) {
+  /* Product Grid: 3 cards per row with slightly wider cards */
   .product-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important; /* flexible 3 columns */
-    gap: 2px !important;   /* smaller gap to allow wider cards */
-    padding: 0.25rem !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important; /* keep 3 columns */
+    gap: 3px !important;   /* slightly larger gap */
+    padding: 0.3rem !important;
     width: 100% !important;
     box-sizing: border-box;
   }
 
-  /* Product Card: wider cards */
+  /* Product Card: slightly wider cards */
   .product-card {
     width: 100% !important;  /* fill grid column */
     min-width: 0 !important; /* override previous min-width */
     min-height: 100px;
-    padding: 0.4rem !important;
+    padding: 0.45rem !important;
     border-radius: 12px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;       /* slightly larger font */
     box-sizing: border-box;
   }
 
   .product-card img {
     width: 100%;
-    height: 90px;
+    height: 95px;             /* slightly taller */
     object-fit: cover;
     border-radius: 8px;
   }
 
   .product-card h3 {
-    font-size: 0.75rem;
+    font-size: 0.8rem;       /* slightly larger */
     margin-top: 4px;
     text-align: center;
   }
 
   .product-card p {
-    font-size: 0.7rem;
+    font-size: 0.75rem;      /* slightly larger */
     text-align: center;
   }
 
   .sold-out-badge {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     padding: 2px 4px;
     top: 6px;
     right: 6px;
@@ -309,7 +309,7 @@
 
   /* Header adjustments */
   .header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;       /* slightly larger than 375px */
     text-align: center;
     line-height: 1.2;
     margin: 0.5rem 0;
