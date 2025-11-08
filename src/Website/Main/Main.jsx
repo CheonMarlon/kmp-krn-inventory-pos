@@ -17,7 +17,6 @@ const Main = () => {
     { id: "contact", label: "Contact", href: "#contact" },
   ];
 
-
   return (
     <div className="main-container">
       {/* Floating Lock Button */}
@@ -31,34 +30,30 @@ const Main = () => {
       <section className="main-hero hero-gradient" id="home">
         <div className="decorative-pattern"></div>
         <div className="usok">
-          <img src="/src/assets/stickers/herobot.png" alt="" />
+          <img src="/stickers/herobot.png" alt="Usok" />
         </div>
         <div className="usok2">
-          <img src="/src/assets/stickers/herotop.png" alt="" />
+          <img src="/stickers/herotop.png" alt="Usok Top" />
         </div>
         <div className="top-bar"></div>
 
-      <header className="main-header">
-        <ul>
-          {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={activeMenu === item.id ? "active" : ""}
-              onClick={() => setActiveMenu(item.id)}
-            >
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </header>
+        <header className="main-header">
+          <ul>
+            {menuItems.map((item) => (
+              <li
+                key={item.id}
+                className={activeMenu === item.id ? "active" : ""}
+                onClick={() => setActiveMenu(item.id)}
+              >
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </header>
 
         <section className="hero-section">
           <div className="hero-left">
-            <img
-              src="/src/assets/stickers/4.png"
-              alt="roof"
-              className="roof"
-            />
+            <img src="/stickers/4.png" alt="roof" className="roof" />
             <h1>Kampo Karne</h1>
 
             <div className="loader">
@@ -83,16 +78,8 @@ const Main = () => {
 
           <div className="hero-right">
             <div className="pattern-wrapper">
-              <img
-                className="pattern"
-                src="/src/assets/stickers/5.png"
-                alt="Pattern"
-              />
-              <img
-                className="logo"
-                src="/src/assets/stickers/Logo.png"
-                alt="Logo"
-              />
+              <img className="pattern" src="/stickers/5.png" alt="Pattern" />
+              <img className="logo" src="/stickers/Logo.png" alt="Logo" />
             </div>
           </div>
         </section>

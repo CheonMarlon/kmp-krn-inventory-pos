@@ -62,7 +62,7 @@ const TopSeller = () => {
           return {
             id: t.product_id,
             name: prod?.product_name || `Product #${t.product_id}`,
-            img: prod?.img_url || "/src/assets/stickers/placeholder.png",
+            img: prod?.img_url || "/stickers/placeholder.png",
             qty: t.qty,
           };
         });
@@ -102,11 +102,11 @@ const TopSeller = () => {
     <section className="top-seller-section" ref={ref}>
       <h2 className="top-seller-title">Top Seller</h2>
 
-      <img src="/src/assets/stickers/10.png" alt="lantern" className="lantern1" />
-      <img src="/src/assets/stickers/10.png" alt="lantern" className="lantern2" />
-      <img src="/src/assets/stickers/10.png" alt="lantern" className="lantern3" />
-      <img src="/src/assets/stickers/10.png" alt="lantern" className="lantern4" />
-
+      {/* Lantern Decorations */}
+      <img src="/stickers/10.png" alt="lantern" className="lantern1" />
+      <img src="/stickers/10.png" alt="lantern" className="lantern2" />
+      <img src="/stickers/10.png" alt="lantern" className="lantern3" />
+      <img src="/stickers/10.png" alt="lantern" className="lantern4" />
 
       <div className="top-seller-container">
         {topProducts.length >= 3 ? (
