@@ -229,27 +229,89 @@
   background-color: rgba(183, 28, 28, 0.1) !important;
 }
 
-/* ==== SEARCH BAR FIX ONLY FOR 768px ==== */
+/* ==== SEARCH BAR & CATEGORY TABS RESPONSIVE ==== */
+
+/* For tablets and small screens (≤768px) */
 @media (max-width: 768px) {
-  /* Shrink tabs but keep search bar full width */
+  /* Shrink category tabs to prevent overflow */
   .product-showcase .category-tabs {
-    flex: 1 1 auto; /* allow tabs to shrink */
-    min-width: 0;   /* prevents overflow */
-    font-size: 0.85rem; /* smaller tabs text */
+    flex: 1 1 auto;       /* allow tabs to shrink */
+    min-width: 0;         /* prevent overflow */
+    font-size: 0.85rem;   /* smaller text */
+    gap: 0.4rem;          /* reduce space between tabs */
   }
 
-  /* Make the search bar always visible and full width */
+  /* Make search bar take remaining space */
   .product-showcase .category-tabs + .MuiBox-root {
-    flex: 1 1 auto; 
-    min-width: 0;  
-    width: auto;   /* let it take remaining space */
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
   }
 
+  /* Ensure text field is full width */
   .product-showcase .MuiTextField-root {
     width: 100%;
   }
 
   .product-showcase .MuiTextField-root input {
     font-size: 0.95rem;
+    padding: 0.35rem 0.5rem; /* better spacing for small screens */
+  }
+}
+
+/* ==== SMALL PHONE LAYOUT (≤375px) ==== */
+@media (max-width: 375px) {
+  /* Product Grid: 3 cards per row with wider cards */
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important; /* flexible 3 columns */
+    gap: 2px !important;   /* smaller gap to allow wider cards */
+    padding: 0.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Product Card: wider cards */
+  .product-card {
+    width: 100% !important;  /* fill grid column */
+    min-width: 0 !important; /* override previous min-width */
+    min-height: 100px;
+    padding: 0.4rem !important;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  .product-card p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .sold-out-badge {
+    font-size: 0.55rem;
+    padding: 2px 4px;
+    top: 6px;
+    right: 6px;
+  }
+
+  /* Header adjustments */
+  .header h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0.5rem 0;
   }
 }

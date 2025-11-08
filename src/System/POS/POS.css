@@ -419,3 +419,42 @@
     overflow-x: hidden !important;
   }
 }
+
+/* === FULL MOBILE HEADER FIX (≤375px) === */
+@media (max-width: 375px) {
+  /* Make header fixed so nav/logout stay visible */
+  .pos-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 1000;
+    padding: 0.6rem 0.8rem !important; /* smaller padding */
+    box-shadow: 0 2px 0 #000;
+    font-size: 0.85rem; /* shrink header font */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Nav and logout buttons smaller and aligned */
+  .pos-nav,
+  .logout-btn {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.6rem !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Add spacing below header so content isn’t hidden */
+  .pos-left {
+    margin-top: 3.5rem !important; /* adjust for fixed header height */
+  }
+
+  /* Optional: reduce header title size */
+  .pos-header h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+    flex: 1;
+  }
+}

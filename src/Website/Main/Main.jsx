@@ -73,7 +73,14 @@ const Main = () => {
               </div>
             </div>
 
-            <button><span>Contact Us</span></button>
+            <button onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}>
+                <span>Contact Us</span>
+</button>
           </div>
 
           <div className="hero-right">

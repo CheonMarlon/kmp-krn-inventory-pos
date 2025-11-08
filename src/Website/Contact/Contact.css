@@ -485,3 +485,105 @@
     transition: all 0.3s ease;
   }
 }
+
+/* ==== CONTACT LAYOUT MOBILE (≤375px) ==== */
+@media (max-width: 375px) {
+
+  /* === General Layout === */
+  .upper-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;       /* slightly smaller gap */
+    margin-top: 6rem;  /* reduce top margin */
+    padding: 0.8rem;
+  }
+
+  .left-info,
+  .right-info {
+    width: 100%;
+    max-width: 95%;
+    padding: 0.8rem;
+  }
+
+  .upper-section h2 {
+    font-size: 1.6rem;   /* smaller header */
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .right-info li,
+  .right-info a {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .right-info svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    display: none; /* keep decorative icons hidden */
+  }
+
+  /* === Logo and Background === */
+  .center-logo {
+    display: flex;
+    position: absolute;
+    width: 130%;                  /* smaller logo */
+    transform: translate(-50%, -49.5%);
+  }
+
+  .center-back {
+    width: 75%;                   /* smaller background */
+    transform: translate(-51%, -35%);
+    opacity: 0.55;
+  }
+
+  /* === Map Section === */
+  .map-container iframe {
+    width: 100%;
+    height: 160px;                /* smaller map */
+    border-radius: 10px;
+  }
+
+  /* === Bottom Section === */
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 0.8rem;
+    gap: 1rem;
+  }
+
+  .lower-left {
+    width: 100%;
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  /* === Hide Decorative Elements === */
+  .cow {
+    display: none;
+  }
+
+  /* === Font & Spacing Adjustments === */
+  p, li, a {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  h3, h4 {
+    font-size: 1.1rem;
+  }
+
+  /* === Smooth transitions === */
+  .upper-section,
+  .bottom-section {
+    transition: all 0.3s ease;
+  }
+}
+
