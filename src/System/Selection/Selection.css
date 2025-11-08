@@ -64,3 +64,42 @@
   margin-top: 18px;
   display: inline-block;
 }
+
+/* === MOBILE RESPONSIVE (≤500px) === */
+@media (max-width: 500px) {
+  .selection-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .selection-grid {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .selection-card {
+    width: 180px;   /* smaller card */
+    height: 240px;
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .selection-card:hover {
+    transform: translateY(-6px) scale(1.05); /* slightly stronger pop on small screens */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  }
+
+  .thumbnail {
+    height: 55%;
+    border-radius: 10px;
+  }
+
+  .selection-label {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}

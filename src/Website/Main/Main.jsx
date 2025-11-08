@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Main.css";
 import LockButton from "../Chatbot/LockButton";
 import Login from "../Chatbot/Login";
+import Chatbot from "../Chatbot/Chatbot";
 import TopSeller from "../TopSeller/TopSeller";
 import ProductShowcase from "../Product/ProductShowcase";
 import Contact from "../Contact/Contact";
@@ -21,6 +22,7 @@ const Main = () => {
     <div className="main-container">
       {/* Floating Lock Button */}
       <LockButton onClick={() => setShowLogin(true)} />
+      <Chatbot />
 
       {/* Login Modal */}
       {showLogin && <Login onClose={() => setShowLogin(false)} />}
@@ -28,6 +30,12 @@ const Main = () => {
       {/* Hero Section */}
       <section className="main-hero hero-gradient" id="home">
         <div className="decorative-pattern"></div>
+        <div className="usok">
+          <img src="/src/assets/stickers/herobot.png" alt="" />
+        </div>
+        <div className="usok2">
+          <img src="/src/assets/stickers/herotop.png" alt="" />
+        </div>
         <div className="top-bar"></div>
 
       <header className="main-header">

@@ -3,9 +3,22 @@
   background: #ffffff;
   color: #111;
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 15rem;
+  
   font-family: "MoneyGame", "Pretendard", "Noto Sans KR", sans-serif;
 }
+
+.MuiPagination-root {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.product-showcase {
+  position: relative;
+  overflow: visible; /* ensures pagination isn't clipped */
+}
+
 
 /* ==== HEADER ==== */
 .header {
@@ -75,7 +88,7 @@
 
   /* FIXED SIZE */
   width: 220px;
-  height: 220px;
+  height: 240px;
 
   display: flex;
   flex-direction: column;
@@ -157,4 +170,86 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+
+/* ==== EMPTY STATE ==== */
+.no-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60vh; /* ensures it fills enough space */
+  width: 100%;
+  color: #555;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.no-products h6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b71c1c;
+  margin-bottom: 0.5rem;
+}
+
+.no-products p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.MuiGrid-container {
+  min-height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ==== PAGINATION ==== */
+.MuiPagination-root {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem ;
+}
+
+.MuiPagination-ul li button {
+  color: #b71c1c !important;
+  font-weight: 600;
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+}
+
+.MuiPagination-ul li button.Mui-selected {
+  background-color: #b71c1c !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.MuiPagination-ul li button:hover {
+  background-color: rgba(183, 28, 28, 0.1) !important;
+}
+
+/* ==== SEARCH BAR FIX ONLY FOR 768px ==== */
+@media (max-width: 768px) {
+  /* Shrink tabs but keep search bar full width */
+  .product-showcase .category-tabs {
+    flex: 1 1 auto; /* allow tabs to shrink */
+    min-width: 0;   /* prevents overflow */
+    font-size: 0.85rem; /* smaller tabs text */
+  }
+
+  /* Make the search bar always visible and full width */
+  .product-showcase .category-tabs + .MuiBox-root {
+    flex: 1 1 auto; 
+    min-width: 0;  
+    width: auto;   /* let it take remaining space */
+  }
+
+  .product-showcase .MuiTextField-root {
+    width: 100%;
+  }
+
+  .product-showcase .MuiTextField-root input {
+    font-size: 0.95rem;
+  }
 }

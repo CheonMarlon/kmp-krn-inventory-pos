@@ -1,7 +1,7 @@
 /* === GLOBAL LAYOUT === */
 .dashboard-container {
   padding: 2rem;
-  background-color: #f7f8fa;
+  background-color: #ffffff;
   min-height: 100vh;
   color: #222;
   font-family: "Poppins", sans-serif;
@@ -145,35 +145,38 @@
 
 .card {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0 0 rgb(0, 0, 0);
   padding: 1.5rem;
   text-align: center;
   transition: all 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translate(2px, 2px);          /* slight "pop" on hover */
+  box-shadow: 8px 8px 0px 0px #000;       /* stronger shadow on hover */
 }
-
 .card h3 {
   font-size: 1rem;
-  color: #555;
+  color: #222;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .card p {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #222;
+  color: #000;
 }
+
 
 /* === CHART SECTIONS === */
 .chart-section {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0 0 rgb(0, 0, 0);
   padding: 1.5rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
@@ -192,33 +195,169 @@
   font-style: italic;
 }
 
-/* === RESPONSIVE === */
+/* === ACTION ROW (Filter + Export Button) === */
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* push everything to the right */
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.action .filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.action select:hover {
+  border-color: #555;
+}
+
+.action .print-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease, transform 0.2s ease;
+}
+
+.action .print-btn:hover {
+  background-color: #fffae6;
+  transform: translateY(-2px);
+}
+
+
+/* === RESPONSIVE FOR TABLET (≤768px) === */
 @media (max-width: 768px) {
+  /* Dashboard Header: stack title and buttons vertically */
   .dashboard-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;       /* center all content */
+    justify-content: center;
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
   }
 
-  .filter {
+  /* Title centered */
+  .dashboard-header h1 {
+    flex: none;
+    text-align: center;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  /* Buttons below the title */
+  .header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* center buttons */
+    gap: 0.5rem;
     width: 100%;
+  }
+
+
+  .back-btn,
+  .logout-btn {
+    width: auto;
+  }
+
+  /* Top summary cards: 2 columns */
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  /* Chart / Export PDF section */
+  .chart-section {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+  }
+
+  .chart-section canvas,
+  .chart-section svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+    .action {
+    justify-content: center;  /* center row on tablet */
     flex-wrap: wrap;
     gap: 0.5rem;
   }
 
-  .print-btn,
-  .back-btn,
-  .logout-btn {
-    width: 100%;
-    justify-content: center;
+  .action .filter,
+  .action .print-btn {
+    width: auto; /* don't stretch */
   }
 }
 
+
+/* === RESPONSIVE FOR MOBILE (≤500px) === */
 @media (max-width: 500px) {
-  .dashboard-container {
-    padding: 1rem;
+  .dashboard-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .filter,
+  .print-btn,
+  .back-btn,
+  .logout-btn {
+    width: auto;
+  }
+
+  /* Cards stack */
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .card p {
     font-size: 1.2rem;
+  }
+
+  /* Chart section small and scrollable */
+  .chart-section {
+    max-width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }

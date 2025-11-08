@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../microservices/supabaseClient";
 import "./Login.css"; // optional: separate CSS for login modal
 import { useNavigate } from "react-router-dom";
 

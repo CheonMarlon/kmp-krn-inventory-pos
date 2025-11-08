@@ -465,29 +465,94 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE FOR TABLET (~768px) ===== */
 @media (max-width: 768px) {
+  /* MAIN GRID: stack table and controls vertically */
   .inventory-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* one column layout */
+    gap: 1.5rem;
+    position: relative;
   }
 
-  .inventory-controls {
+  /* TABLE HEADER CONTROLS: add button left, search right */
+  .table-header-controls {
+    position: relative; /* parent context for absolute children */
+    width: 100%;
+    height: 50px; /* adjust height if needed */
+    margin-bottom: 0.5rem; /* space above table */
+  }
+
+  /* Add Product Button - top left */
+  .table-header-controls .add-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto; /* natural width */
+    z-index: 10;
+  }
+
+  /* Search Bar - top right */
+  .table-header-controls .search-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48%; /* nearly half width */
+    z-index: 10;
+  }
+
+  /* Table adjustments */
+  .inventory-table-container {
+    overflow-x: auto; /* allow horizontal scroll if table is wide */
+    padding-top: 60px; /* space for absolute positioned controls */
+  }
+
+  .inventory-table th,
+  .inventory-table td {
+    padding: 0.6rem; /* reduce padding for smaller screens */
+    font-size: 0.85rem; /* slightly smaller font */
+  }
+
+  /* Selected product card full width */
+  .selected-product-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Pagination controls at the bottom, still full width */
+  .pagination-controls {
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .page-btn {
+    width: auto; /* natural width for buttons */
+  }
+
+  /* Navigation bar adjustments */
+  .inventory-nav {
+    flex-direction: column;
     gap: 0.5rem;
   }
 
-  .pagination-controls {
+  .nav-center {
+    justify-content: center;
     width: 100%;
-    justify-content: space-between;
   }
 
   .nav-right {
-    position: static;
-    margin-top: 0.5rem;
+    margin-left: 0;
+    width: 100%;
   }
 
-  .selected-product-card {
-    width: 100%;
+  /* Modal responsiveness */
+  .modal-content {
+    width: 90%; /* fit tablet screens better */
+    padding: 1.5rem 1.8rem;
+  }
+
+  .modal-form input,
+  .modal-form select {
+    font-size: 0.9rem;
   }
 }

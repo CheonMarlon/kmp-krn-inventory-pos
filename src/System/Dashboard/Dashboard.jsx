@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../microservices/supabaseClient";
 import { Printer } from "lucide-react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -243,9 +243,26 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <header className="dashboard-header">
-        <h1>📊 Kampo Karne K Mart Dashboard</h1>
-        <div className="header-buttons">
+    {/* === TITLE === */}
+    <h1 className="inv-title">Kampo Karne Dashboard</h1>
+
+    <div className="inventory-nav">
+      <div className="nav-center">
+        <button className="nav-btn" onClick={() => navigate("/inventory")}>
+          Go to Inventory
+        </button>
+        <button className="nav-btn" onClick={() => navigate("/pos")}>
+          Go to POS
+        </button>
+        <button className="nav-btn" onClick={handleLogout}>
+          🚪 Logout
+        </button>
+      </div>
+    </div>
+
+      <hr className="nav-hr" />
+
+      <div className="action">
           <div className="filter">
             <label>Filter:</label>
             <select value={filter} onChange={(e) => setFilter(e.target.value)}>
@@ -259,20 +276,7 @@ const Dashboard = () => {
           <button className="print-btn" onClick={handlePrint}>
             <Printer /> Export PDF
           </button>
-
-          <button className="back-btn" onClick={() => navigate("/inventory")}>
-            ← Go to Inventory
-          </button>
-
-          <button className="back-btn" onClick={() => navigate("/pos")}>
-            ← Go to POS
-          </button>
-
-          <button className="logout-btn" onClick={handleLogout}>
-            🚪 Logout
-          </button>
-        </div>
-      </header>
+      </div>
 
       {/* === SUMMARY === */}
       <section className="summary-grid">

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { supabase } from "./supabaseClient";
-import useDisableBackNavigation from "./useDisableBackNavigation";
-import useDisableDevTools from "./disableDevTools"; 
+import { supabase } from "./microservices/supabaseClient";
+import useDisableBackNavigation from "./microservices/useDisableBackNavigation";
+import useDisableDevTools from "./microservices/disableDevTools"; 
 
 
 import Main from "./Website/Main/Main";
-import Chatbot from "./Website/Chatbot/Chatbot";
 import Selection from "./System/Selection/Selection";
 
 import POS from "./System/POS/POS";
@@ -47,7 +46,6 @@ const App = () => {
           element={
             <>
               <Main />
-              <Chatbot />
             </>
           }
         />

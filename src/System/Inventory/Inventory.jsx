@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Inventory.css";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../microservices/supabaseClient";
 import {
   Plus,
   Trash,
@@ -205,13 +205,11 @@ const Inventory = () => {
       <div className="inventory-nav">
         <div className="nav-center">
           <button className="nav-btn" onClick={() => navigate("/pos")}>
-            🛒 POS
+            Go to POS
           </button>
           <button className="nav-btn" onClick={() => navigate("/dashboard")}>
-            📊 Dashboard
+            Go to Dashboard
           </button>
-        </div>
-        <div className="nav-right">
           <button className="logout-btn" onClick={handleLogout}>
             <LogOut size={16} /> Logout
           </button>

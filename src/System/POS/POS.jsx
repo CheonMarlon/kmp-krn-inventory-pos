@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./POS.css";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../microservices/supabaseClient";
 import { X, Printer, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import VoidOrders from "../VoidOrders/VoidOrders";
@@ -196,6 +196,14 @@ const POS = () => {
                     }
                   }}
                 >
+              {/* IMAGE */}
+              <img
+                src={i.img_url || "/src/assets/stickers/placeholder.png"}
+                alt={i.product_name}
+                className="product-image"
+              />
+
+
                   <h3>{i.product_name}</h3>
                   <p>₱{price.toLocaleString()}</p>
                   {i.status === "Out of Stock" && (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./VoidOrders.css";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../../microservices/supabaseClient";
 import { X } from "lucide-react";
 
 const VoidOrders = ({ onClose }) => {

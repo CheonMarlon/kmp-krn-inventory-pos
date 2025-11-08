@@ -296,14 +296,84 @@
 .add-btn { background: #fff; border: 3px solid #000; color: #fff; font-weight: 700; padding: 0.6rem 1.2rem; border-radius: 12px; cursor: pointer; transition: 0.2s ease; box-shadow: 3px 3px 0 #000; }
 .add-btn:hover { background: #000; color: #000; }
 
+.product-image {
+  width: 100%;
+  height: 150px; /* adjust as needed */
+  object-fit: cover;
+  border-radius: 16px 16px 0 0; /* match card's top radius */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* optional placeholder styling */
+.product-image.placeholder {
+  background: #d9d9d9;
+}
+
+
 /* === ANIMATIONS === */
 @keyframes popIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* === RESPONSIVE === */
-@media (max-width: 900px) {
-  .pos-layout { flex-direction: column; height: auto; }
-  .pos-left, .pos-right { flex: none; width: 100%; height: auto; border: none; }
-  .pos-right { border-top: 4px solid #000; }
-  .product-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+/* === TABLET RESPONSIVE (≤768px) === */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* smaller cards */
+    gap: 8px;
+    padding: 0.5rem;
+  }
+
+  .product-card {
+    width: 120px;
+    min-height: 90px;
+    padding: 0.25rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+
+  .product-card h3 {
+    font-size: 0.75rem;
+  }
+
+  .product-card p {
+    font-size: 0.7rem;
+  }
+
+  .sold-out-badge {
+    font-size: 0.6rem;
+    padding: 1px 3px;
+  }
 }
+
+/* === MOBILE RESPONSIVE (≤500px) === */
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* even smaller cards */
+    gap: 6px;
+    padding: 0.25rem;
+  }
+
+  .product-card {
+    width: 90px;
+    min-height: 70px;
+    padding: 0.2rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
+  }
+
+  .product-card h3 {
+    font-size: 0.65rem;
+  }
+
+  .product-card p {
+    font-size: 0.6rem;
+  }
+
+  .sold-out-badge {
+    font-size: 0.55rem;
+    padding: 1px 2px;
+  }
+}
+
+

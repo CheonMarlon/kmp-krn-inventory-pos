@@ -109,10 +109,6 @@
   z-index: 2;
 }
 
-
-
-
-
 .lantern1{
   position: absolute;
   width: 25rem;
@@ -265,7 +261,7 @@
 
   .center-card {
     transform: none;
-    width: 80%;
+    width: 60%;
     height: auto;
   }
 
@@ -284,5 +280,36 @@
 
   .top-seller-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 800px){
+  .top-seller-section::before {
+    height: 120px;  /* smaller curve for phones */
+    width: 150%;
+    clip-path: path('M0,120 C300,-20 600,-20 900,120 L900,120 L0,120 Z'); /* deeper curve */
+    display: flex;
+    left: -9%;
+    bottom: -2%;
+  }
+
+  .lantern1, .lantern2{
+    display: none;
+  }
+
+  .lantern3{
+    width: 30rem;
+    top: -5rem;
+    right: -15rem;
+  }
+
+  .lantern4{
+    width: 30rem;
+    top: -5rem;
+    left: -15rem;
+  }
+
+  .top-seller-title {
+    font-size: 5rem;
   }
 }
